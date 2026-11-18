@@ -1,0 +1,238 @@
+
+.auth-page {
+  min-height: 100vh;
+    width: 100%;
+      display: flex;
+        align-items: center;
+          justify-content: center;
+            padding: 24px 16px;
+              background:
+                  radial-gradient(circle at 15% 15%, #dce9ff 0, transparent 35%),
+                      radial-gradient(circle at 85% 85%, #d8f5ed 0, transparent 35%),
+                          #f4f7fc;
+                            font-family: Inter, system-ui, sans-serif;
+                              box-sizing: border-box;
+                              }
+
+                              .auth-card {
+                                width: 100%;
+                                  max-width: 460px;
+                                    padding: 36px;
+                                      border: 1px solid #e6ebf3;
+                                        border-radius: 22px;
+                                          background: #fff;
+                                            box-shadow: 0 24px 70px rgba(24, 43, 78, 0.12);
+                                              box-sizing: border-box;
+                                              }
+
+                                              .auth-brand {
+                                                text-align: center;
+                                                  margin-bottom: 28px;
+                                                  }
+
+                                                  .auth-logo {
+                                                    width: 54px;
+                                                      height: 54px;
+                                                        display: grid;
+                                                          place-items: center;
+                                                            margin: 0 auto 12px;
+                                                              border-radius: 16px;
+                                                                background: linear-gradient(135deg, #2865e8, #1744a8);
+                                                                  color: #fff;
+                                                                    font-size: 30px;
+                                                                      font-weight: 800;
+                                                                        box-shadow: 0 8px 20px rgba(40, 101, 232, 0.25);
+                                                                        }
+
+                                                                        .auth-brand h1 {
+                                                                          margin: 0;
+                                                                            color: #14213b;
+                                                                              font-size: 25px;
+                                                                                letter-spacing: 3px;
+                                                                                  font-weight: 850;
+                                                                                  }
+
+                                                                                  .auth-brand p {
+                                                                                    margin: 7px 0 0;
+                                                                                      color: #8994a7;
+                                                                                        font-size: 10px;
+                                                                                          font-weight: 700;
+                                                                                            letter-spacing: 1.7px;
+                                                                                            }
+
+                                                                                            .auth-portals {
+                                                                                              display: grid;
+                                                                                                grid-template-columns: 1fr 1fr;
+                                                                                                  gap: 6px;
+                                                                                                    padding: 5px;
+                                                                                                      margin-bottom: 27px;
+                                                                                                        border-radius: 12px;
+                                                                                                          background: #f1f4f9;
+                                                                                                          }
+
+                                                                                                          .auth-portals button {
+                                                                                                            min-height: 44px;
+                                                                                                              border: 0;
+                                                                                                                border-radius: 9px;
+                                                                                                                  background: transparent;
+                                                                                                                    color: #66738a;
+                                                                                                                      font-size: 13px;
+                                                                                                                        font-weight: 700;
+                                                                                                                          cursor: pointer;
+                                                                                                                          }
+
+                                                                                                                          .auth-portals button.selected {
+                                                                                                                            color: #245ed5;
+                                                                                                                              background: #fff;
+                                                                                                                                box-shadow: 0 2px 8px rgba(25, 45, 80, 0.09);
+                                                                                                                                }
+
+                                                                                                                                .auth-card h2 {
+                                                                                                                                  margin: 0;
+                                                                                                                                    color: #192945;
+                                                                                                                                      font-size: 25px;
+                                                                                                                                        font-weight: 750;
+                                                                                                                                        }
+
+                                                                                                                                        .auth-subtitle {
+                                                                                                                                          margin: 8px 0 24px;
+                                                                                                                                            color: #8490a3;
+                                                                                                                                              font-size: 13px;
+                                                                                                                                                line-height: 1.6;
+                                                                                                                                                }
+
+                                                                                                                                                .auth-card form {
+                                                                                                                                                  display: flex;
+                                                                                                                                                    flex-direction: column;
+                                                                                                                                                    }
+
+                                                                                                                                                    .auth-card form label {
+                                                                                                                                                      margin: 14px 0 7px;
+                                                                                                                                                        color: #35435b;
+                                                                                                                                                          font-size: 12px;
+                                                                                                                                                            font-weight: 700;
+                                                                                                                                                            }
+
+                                                                                                                                                            .auth-card input,
+                                                                                                                                                            .auth-card textarea {
+                                                                                                                                                              width: 100%;
+                                                                                                                                                                min-height: 47px;
+                                                                                                                                                                  padding: 12px 14px;
+                                                                                                                                                                    border: 1px solid #dfe5ee;
+                                                                                                                                                                      border-radius: 10px;
+                                                                                                                                                                        outline: none;
+                                                                                                                                                                          background: #fbfcfe;
+                                                                                                                                                                            color: #1b2940;
+                                                                                                                                                                              font: inherit;
+                                                                                                                                                                                font-size: 14px;
+                                                                                                                                                                                  box-sizing: border-box;
+                                                                                                                                                                                  }
+
+                                                                                                                                                                                  .auth-card textarea {
+                                                                                                                                                                                    min-height: 85px;
+                                                                                                                                                                                      resize: vertical;
+                                                                                                                                                                                      }
+
+                                                                                                                                                                                      .auth-card input:focus,
+                                                                                                                                                                                      .auth-card textarea:focus {
+                                                                                                                                                                                        border-color: #2865e8;
+                                                                                                                                                                                          background: #fff;
+                                                                                                                                                                                            box-shadow: 0 0 0 3px rgba(40, 101, 232, 0.1);
+                                                                                                                                                                                            }
+
+                                                                                                                                                                                            .auth-submit {
+                                                                                                                                                                                              min-height: 49px;
+                                                                                                                                                                                                margin-top: 25px;
+                                                                                                                                                                                                  border: none;
+                                                                                                                                                                                                    border-radius: 11px;
+                                                                                                                                                                                                      background: linear-gradient(110deg, #2865e8, #1749b8);
+                                                                                                                                                                                                        color: #fff;
+                                                                                                                                                                                                          font-size: 14px;
+                                                                                                                                                                                                            font-weight: 750;
+                                                                                                                                                                                                              cursor: pointer;
+                                                                                                                                                                                                                box-shadow: 0 7px 18px rgba(40, 101, 232, 0.2);
+                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                .auth-submit:hover {
+                                                                                                                                                                                                                  filter: brightness(1.06);
+                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                  .auth-submit:disabled {
+                                                                                                                                                                                                                    opacity: 0.6;
+                                                                                                                                                                                                                      cursor: not-allowed;
+                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                      .auth-links {
+                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                          justify-content: space-between;
+                                                                                                                                                                                                                            gap: 10px;
+                                                                                                                                                                                                                              margin-top: 20px;
+                                                                                                                                                                                                                              }
+
+                                                                                                                                                                                                                              .auth-links button,
+                                                                                                                                                                                                                              .auth-back {
+                                                                                                                                                                                                                                padding: 5px 0;
+                                                                                                                                                                                                                                  border: none;
+                                                                                                                                                                                                                                    background: none;
+                                                                                                                                                                                                                                      color: #2865e8;
+                                                                                                                                                                                                                                        font-size: 12px;
+                                                                                                                                                                                                                                          font-weight: 700;
+                                                                                                                                                                                                                                            cursor: pointer;
+                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                            .auth-back {
+                                                                                                                                                                                                                                              display: block;
+                                                                                                                                                                                                                                                margin: 18px auto 0;
+                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                .auth-error,
+                                                                                                                                                                                                                                                .auth-success {
+                                                                                                                                                                                                                                                  padding: 12px;
+                                                                                                                                                                                                                                                    margin-bottom: 12px;
+                                                                                                                                                                                                                                                      border-radius: 9px;
+                                                                                                                                                                                                                                                        font-size: 12px;
+                                                                                                                                                                                                                                                          line-height: 1.5;
+                                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                                          .auth-error {
+                                                                                                                                                                                                                                                            color: #b42318;
+                                                                                                                                                                                                                                                              background: #fff0ef;
+                                                                                                                                                                                                                                                                border: 1px solid #ffd5d1;
+                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                .auth-success {
+                                                                                                                                                                                                                                                                  color: #087443;
+                                                                                                                                                                                                                                                                    background: #eaf8f0;
+                                                                                                                                                                                                                                                                      border: 1px solid #c8edda;
+                                                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                                                      .auth-footer {
+                                                                                                                                                                                                                                                                        margin: 28px 0 0;
+                                                                                                                                                                                                                                                                          padding-top: 18px;
+                                                                                                                                                                                                                                                                            border-top: 1px solid #edf0f5;
+                                                                                                                                                                                                                                                                              color: #9aa4b4;
+                                                                                                                                                                                                                                                                                text-align: center;
+                                                                                                                                                                                                                                                                                  font-size: 10px;
+                                                                                                                                                                                                                                                                                    letter-spacing: 0.3px;
+                                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                                    @media (max-width: 480px) {
+                                                                                                                                                                                                                                                                                      .auth-page {
+                                                                                                                                                                                                                                                                                          padding: 14px;
+                                                                                                                                                                                                                                                                                              align-items: center;
+                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                  .auth-card {
+                                                                                                                                                                                                                                                                                                      padding: 25px 20px;
+                                                                                                                                                                                                                                                                                                          border-radius: 18px;
+                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                              .auth-card h2 {
+                                                                                                                                                                                                                                                                                                                  font-size: 22px;
+                                                                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                                                                      .auth-links {
+                                                                                                                                                                                                                                                                                                                          flex-wrap: wrap;
+                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                            
