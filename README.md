@@ -1,32 +1,25 @@
-# React + TypeScript + Vite
+# CODEVEX CRM – Frontend Control Center Update
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This package is based on the project ZIP supplied in the conversation. Existing React + TypeScript + Vite and Supabase files are retained.
 
-Currently, two official plugins are available:
+## Added in this frontend pass
+- Super Admin Control Center entry in the existing Super Admin screen.
+- Control Center sections: Overview, Lead Control, API & Integrations, Plans & Payments, Feature Manager, Public Pages, Audit & Activity.
+- Lead assignment/reassignment UI using the existing `leads.assigned_to` field and existing `profiles` table.
+- Subscription plan editor draft, QR/UPI configuration draft, API provider configuration draft, feature toggles and About/Privacy content editor draft.
+- Public page paths `/about` and `/privacy-policy`.
+- Responsive layout for the new Control Center.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Important implementation boundary
+This is a frontend-first update, not a completed production SaaS backend. Draft settings currently use browser localStorage and are not shared across devices/users. API secrets are not stored or sent. No portal API/webhook is activated. QR/UPI payments are not automatically verified. Automatic payment activation requires a supported payment gateway, server-side webhook signature verification and database updates. Likewise, feature toggles are UI drafts and are not authorization controls until enforced server-side.
 
-## React Compiler
+The Lead Control screen reads current company/lead/profile data and updates the existing `leads.assigned_to` field. Assignment history, response-time event capture, full call/visit/booking funnel metrics and immutable audit records require backend schema/functions and will be checked in the requested final backend audit.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run
+1. Upload/extract this project into StackBlitz as a Vite React TypeScript project.
+2. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in StackBlitz environment variables using your existing Supabase project values.
+3. Run `npm install`, then `npm run dev`.
+4. Sign in with an account that is present in `platform_admins` to access Super Admin. Use **Control Center** in the top header.
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Build verification
+A local production build could not be completed in this environment because npm dependencies were not fully available for installation. Run `npm install` and `npm run build` in StackBlitz; resolve any compiler output before deployment.
