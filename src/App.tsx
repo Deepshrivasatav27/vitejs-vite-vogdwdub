@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import './App.css';
 import { supabase } from './supabase';
+import WorkspaceSuite from './WorkspaceSuite';
 
 type Remark = { id: string; text: string; date: string };
 type Lead = {
@@ -88,6 +89,7 @@ const groups = [
       ['▥', 'Analytics'],
       ['♧', 'Team Members'],
       ['⚙', 'Settings'],
+      ['▣', 'Business Suite'],
     ],
   },
 ];
@@ -506,7 +508,7 @@ export default function App() {
         <div className="content">
           {loadError && <section className="card" style={{ border: '1px solid #dc6b6b', color: '#b42318', marginBottom: 14 }}><b>CRM notice:</b> {loadError} <button className="btn" onClick={() => setLoadError('')}>Dismiss</button></section>}
           {loadingLeads && <section className="card" style={{ marginBottom: 14 }}>Loading company leads from Supabase…</section>}
-          {page === 'Settings' ? (
+          {page === 'Business Suite' ? <WorkspaceSuite /> : page === 'Settings' ? (
             <>
               {heading(
                 'Settings & Appearance',
